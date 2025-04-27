@@ -1,0 +1,100 @@
+html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>K-치킨 매니아</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background: url('https://pimg.mk.co.kr/news/cms/202312/31/news-p.v1.20231229.86ea1e3f1bd341b69b75cabf931dcac1_P1.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+    .glass {
+      background: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+    .nav-glass {
+      background: rgba(0, 0, 0, 0.4);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col items-center py-10">
+  <!-- 네비게이션 바 추가 -->
+  <nav class="nav-glass fixed top-0 w-full z-10">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex justify-between">
+        <div class="flex space-x-4">
+          <!-- 로고 -->
+          <div>
+            <a href="index.html" class="flex items-center py-4 px-2">
+              <span class="font-bold text-white text-lg">K-치킨 매니아</span>
+            </a>
+          </div>
+          
+          <!-- 기본 네비게이션 아이템 -->
+          <div class="hidden md:flex items-center space-x-1">
+            <a href="index.html" class="py-4 px-3 text-white hover:text-yellow-300 transition-colors">홈</a>
+            <a href="bbq.html" class="py-4 px-3 text-white hover:text-yellow-300 transition-colors">BBQ</a>
+            <a href="bhc.html" class="py-4 px-3 text-white hover:text-yellow-300 transition-colors">BHC</a>
+            <a href="kyochon.html" class="py-4 px-3 text-white hover:text-yellow-300 transition-colors">교촌치킨</a>
+            <a href="history.html" class="py-4 px-3 text-white hover:text-yellow-300 transition-colors">치킨의 역사</a>
+          </div>
+        </div>
+        
+        <!-- 모바일 메뉴 버튼 -->
+        <div class="md:hidden flex items-center">
+          <button class="mobile-menu-button" aria-label="메뉴">
+            <svg class="w-6 h-6 text-white" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+              <path d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- 모바일 메뉴 -->
+    <div class="mobile-menu hidden md:hidden bg-black bg-opacity-80">
+      <a href="index.html" class="block py-2 px-4 text-sm text-white hover:bg-gray-700">홈</a>
+      <a href="bbq.html" class="block py-2 px-4 text-sm text-white hover:bg-gray-700">BBQ</a>
+      <a href="bhc.html" class="block py-2 px-4 text-sm text-white hover:bg-gray-700">BHC</a>
+      <a href="kyochon.html" class="block py-2 px-4 text-sm text-white hover:bg-gray-700">교촌치킨</a>
+      <a href="history.html" class="block py-2 px-4 text-sm text-white hover:bg-gray-700">치킨의 역사</a>
+    </div>
+  </nav>
+
+  <header class="mb-10 mt-16">
+    <h1 class="text-4xl font-bold text-white drop-shadow-lg">K-치킨 매니아</h1>
+    <p class="text-lg text-white mt-2 drop-shadow">대한민국 대표 치킨 브랜드 TOP 3 & 대표 메뉴</p>
+  </header>
+  
+  <!-- 기존 main 콘텐츠 유지 -->
+  <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl px-4">
+    <!-- ...existing code... -->
+  </main>
+  
+  <footer class="mt-10 text-white text-sm drop-shadow">
+    &copy; 2024 K-치킨 매니아. All rights reserved.
+  </footer>
+  
+  <!-- 모바일 메뉴 스크립트 -->
+  <script>
+    // 모바일 메뉴 토글 기능
+    const btn = document.querySelector('.mobile-menu-button');
+    const menu = document.querySelector('.mobile-menu');
+    
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>

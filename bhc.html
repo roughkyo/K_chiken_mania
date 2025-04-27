@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BHC - K-치킨 매니아</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="js/main.js"></script>
+  <style>
+    body {
+      background: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
+      background-size: cover;
+    }
+    .glass {
+      background: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+    .menu-card {
+      transition: transform 0.3s ease;
+    }
+    .menu-card:hover {
+      transform: translateY(-5px);
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col items-center py-10">
+  <header class="mb-10 text-center">
+    <a href="index.html" class="text-white hover:text-yellow-300 transition-colors">← 메인으로 돌아가기</a>
+    <h1 class="text-4xl font-bold text-white drop-shadow-lg mt-4">BHC</h1>
+    <p class="text-lg text-white mt-2 drop-shadow">대한민국 대표 치킨 브랜드</p>
+  </header>
+  
+  <main class="w-full max-w-6xl px-4">
+    <!-- 검색 및 필터 -->
+    <section class="glass p-6 mb-8">
+      <div class="flex flex-col md:flex-row gap-4">
+        <input type="text" id="searchInput" placeholder="메뉴 검색..." class="flex-1 px-4 py-2 rounded-lg bg-white/20 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+        <select id="priceFilter" onchange="filterByPrice()" class="px-4 py-2 rounded-lg bg-white/20 text-white focus:outline-none focus:ring-2 focus:ring-yellow-500">
+          <option value="">가격 필터</option>
+          <option value="under15000">15,000원 이하</option>
+          <option value="15000-20000">15,000원 ~ 20,000원</option>
+          <option value="over20000">20,000원 이상</option>
+        </select>
+        <select onchange="sortMenu(this.value)" class="px-4 py-2 rounded-lg bg-white/20 text-white focus:outline-none focus:ring-2 focus:ring-yellow-500">
+          <option value="">정렬 기준</option>
+          <option value="price">가격순</option>
+          <option value="name">이름순</option>
+        </select>
+      </div>
+    </section>
+
+    <!-- 브랜드 소개 -->
+    <section class="glass p-6 mb-8">
+      <h2 class="text-2xl font-semibold mb-4">브랜드 소개</h2>
+      <p class="text-gray-700">
+        BHC는 1999년 설립된 대한민국의 대표적인 치킨 프랜차이즈 브랜드입니다.
+        '뿌링클'을 필두로 한 다양한 메뉴로 국내외에서 큰 사랑을 받고 있습니다.
+        특히 치즈 시즈닝을 사용한 특별한 맛이 특징이며, 이는 BHC만의 독특한 방식입니다.
+      </p>
+    </section>
+
+    <!-- 메뉴 소개 -->
+    <div class="menu-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- 뿌링클 -->
+      <div class="menu-card glass p-6 rounded-lg">
+        <img src="images/brands/bhc/bhc_ppuringcle.jpg" alt="뿌링클" class="rounded-lg w-full h-48 object-cover mb-4">
+        <h3 class="text-xl font-semibold mb-2">뿌링클</h3>
+        <p class="text-gray-300 mb-4">치즈 시즈닝이 매력적인 BHC 대표 메뉴</p>
+        <span class="text-yellow-500 font-semibold">19,000원</span>
+      </div>
+
+      <!-- 맛초킹 -->
+      <div class="menu-card glass p-6 rounded-lg">
+        <img src="images/brands/bhc/bhc_matcho.jpg" alt="맛초킹" class="rounded-lg w-full h-48 object-cover mb-4">
+        <h3 class="text-xl font-semibold mb-2">맛초킹</h3>
+        <p class="text-gray-300 mb-4">달콤짭짤한 간장치킨</p>
+        <span class="text-yellow-500 font-semibold">18,000원</span>
+      </div>
+
+      <!-- 후라이드치킨 -->
+      <div class="menu-card glass p-6 rounded-lg">
+        <img src="images/brands/bhc/bhc_fried.jpg" alt="후라이드치킨" class="rounded-lg w-full h-48 object-cover mb-4">
+        <h3 class="text-xl font-semibold mb-2">후라이드치킨</h3>
+        <p class="text-gray-300 mb-4">바삭함이 살아있는 기본 치킨</p>
+        <span class="text-yellow-500 font-semibold">17,000원</span>
+      </div>
+    </div>
+
+    <!-- 추가 정보 -->
+    <section class="glass p-6 mt-8">
+      <h2 class="text-2xl font-semibold mb-4">브랜드 특징</h2>
+      <ul class="space-y-2 text-gray-700">
+        <li>• 치즈 시즈닝을 사용한 특별한 맛</li>
+        <li>• 엄격한 품질 관리로 일관된 맛 제공</li>
+        <li>• 다양한 사이드 메뉴와 함께하는 완벽한 조합</li>
+        <li>• 전국 1,500여 개의 매장 운영</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="mt-10 text-white text-sm drop-shadow">
+    &copy; 2024 K-치킨 매니아. All rights reserved.
+  </footer>
+</body>
+</html> 

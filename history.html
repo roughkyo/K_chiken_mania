@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>대한민국 치킨의 역사 - K-치킨 매니아</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background: url('https://images.unsplash.com/photo-1610057099431-d73a1c9d2f2f?auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
+      background-size: cover;
+    }
+    .glass {
+      background: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+    .nav-glass {
+      background: rgba(0, 0, 0, 0.4);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+    }
+    .timeline-item {
+      position: relative;
+      padding-left: 2rem;
+      margin-bottom: 2rem;
+    }
+    .timeline-item:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 1px;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.4);
+    }
+    .timeline-item:after {
+      content: "";
+      position: absolute;
+      left: -8px;
+      top: 0;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: #FFD700;
+      border: 2px solid white;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col items-center py-10">
+  <!-- 네비게이션 바 -->
+  <nav class="nav-glass fixed top-0 w-full z-10">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex justify-between">
+        <div class="flex space-x-4">
+          <!-- 로고 -->
+          <div>
+            <a href="index.html" class="flex items-center py-4 px-2">
+              <span class="font-bold text-white text-lg">K-치킨 매니아</span>
+            </a>
+          </div>
+          
+          <!-- 기본 네비게이션 아이템 -->
+          <div class="hidden md:flex items-center space-x-1">
+            <a href="index.html" class="py-4 px-3 text-white hover:text-yellow-300 transition-colors">홈</a>
+            <a href="bbq.html" class="py-4 px-3 text-white hover:text-yellow-300 transition-colors">BBQ</a>
+            <a href="bhc.html" class="py-4 px-3 text-white hover:text-yellow-300 transition-colors">BHC</a>
+            <a href="kyochon.html" class="py-4 px-3 text-white hover:text-yellow-300 transition-colors">교촌치킨</a>
+            <a href="history.html" class="py-4 px-3 text-white hover:text-yellow-300 font-bold border-b-2 border-yellow-300 transition-colors">치킨의 역사</a>
+          </div>
+        </div>
+        
+        <!-- 모바일 메뉴 버튼 -->
+        <div class="md:hidden flex items-center">
+          <button class="mobile-menu-button" aria-label="메뉴">
+            <svg class="w-6 h-6 text-white" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+              <path d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- 모바일 메뉴 -->
+    <div class="mobile-menu hidden md:hidden bg-black bg-opacity-80">
+      <a href="index.html" class="block py-2 px-4 text-sm text-white hover:bg-gray-700">홈</a>
+      <a href="bbq.html" class="block py-2 px-4 text-sm text-white hover:bg-gray-700">BBQ</a>
+      <a href="bhc.html" class="block py-2 px-4 text-sm text-white hover:bg-gray-700">BHC</a>
+      <a href="kyochon.html" class="block py-2 px-4 text-sm text-white hover:bg-gray-700">교촌치킨</a>
+      <a href="history.html" class="block py-2 px-4 text-sm text-white bg-gray-700">치킨의 역사</a>
+    </div>
+  </nav>
+
+  <header class="mb-8 mt-16">
+    <h1 class="text-4xl font-bold text-white drop-shadow-lg">대한민국 치킨의 역사</h1>
+    <p class="text-lg text-white mt-2 drop-shadow">한국 치킨 문화의 시작부터 현재까지</p>
+  </header>
+  
+  <main class="w-full max-w-4xl px-4">
+    <div class="glass p-8">
+      <article>
+        <section class="mb-10">
+          <h2 class="text-2xl font-bold mb-4">치킨, 한국인의 영혼의 음식</h2>
+          <p class="mb-4 leading-relaxed">
+            대한민국에서 치킨은 단순한 음식을 넘어 문화 현상으로 자리 잡았습니다. 맥주와 함께 '치맥'이라는 새로운 문화를 형성하며, 
+            이제는 한국을 대표하는 음식 중 하나로 세계에 알려지고 있습니다.
+          </p>
+        </section>
+        
+        <section class="mb-10">
+          <h2 class="text-2xl font-bold mb-6">대한민국 치킨의 타임라인</h2>
+          
+          <div class="timeline">
+            <div class="timeline-item">
+              <h3 class="text-xl font-bold">1960년대 - 치킨의 도입</h3>
+              <p class="mt-2 mb-4 leading-relaxed">
+                한국에 치킨이 처음 소개된 시기입니다. 미군 부대를 통해 프라이드 치킨 조리법이 유입되었으며,
+                1970년대 초 '림스치킨'이 한국 최초의 치킨 전문점으로 알려져 있습니다.
+              </p>
+            </div>
+            
+            <div class="timeline-item">
+              <h3 class="text-xl font-bold">1980년대 - 치킨 프랜차이즈의 시작</h3>
+              <p class="mt-2 mb-4 leading-relaxed">
+                IMF 외환위기 이후 실직자들의 창업 아이템으로 치킨 가게가 인기를 끌기 시작했습니다.
+                1982년 국내 최초의 치킨 프랜차이즈인 '롯데리아 치킨'이 등장했습니다.
+              </p>
+            </div>
+            
+            <div class="timeline-item">
+              <h3 class="text-xl font-bold">1990년대 - 프랜차이즈 붐</h3>
+              <p class="mt-2 mb-4 leading-relaxed">
+                1991년 교촌치킨이 설립되어 한국형 프랜차이즈 치킨의 새로운 지평을 열었습니다. 
+                이후 1995년 BBQ가 설립되며 본격적인 치킨 프랜차이즈 시대가 열렸습니다.
+              </p>
+            </div>
+            
+            <div class="timeline-item">
+              <h3 class="text-xl font-bold">2000년대 - 양념 치킨과 다양화</h3>
+              <p class="mt-2 mb-4 leading-relaxed">
+                2000년대에 들어서며 프라이드 치킨뿐만 아니라 다양한 양념 치킨이 등장했습니다.
+                교촌의 '간장치킨', BHC의 '뿌링클' 등 차별화된 레시피가 인기를 끌었습니다.
+              </p>
+            </div>
+            
+            <div class="timeline-item">
+              <h3 class="text-xl font-bold">2010년대 - 치맥 문화와 세계화</h3>
+              <p class="mt-2 mb-4 leading-relaxed">
+                '치맥(치킨과 맥주)'이라는 조합이 한국의 독특한 식문화로 자리 잡았습니다.
+                드라마 '별에서 온 그대'를 통해 치킨 문화가 해외로 알려지기 시작했으며,
+                한국 치킨의 세계화가 본격화되었습니다.
+              </p>
+            </div>
+            
+            <div class="timeline-item">
+              <h3 class="text-xl font-bold">2020년대 - 배달 문화와 진화</h3>
+              <p class="mt-2 mb-4 leading-relaxed">
+                코로나19 팬데믹으로 배달 문화가 더욱 확산됨에 따라 치킨 배달 시장이 급성장했습니다.
+                건강을 고려한 오븐 치킨, 에어프라이어용 치킨 등 새로운 조리법이 등장하고,
+                한국의 치킨 프랜차이즈들이 해외 진출을 활발히 하고 있습니다.
+              </p>
+            </div>
+          </div>
+        </section>
+        
+        <section class="mb-10">
+          <h2 class="text-2xl font-bold mb-4">대한민국 치킨 산업의 규모</h2>
+          <p class="mb-4 leading-relaxed">
+            현재 한국의 치킨 시장은 약 7조원 규모로 성장했으며, 전국에 약 87,000개 이상의 치킨 전문점이 운영 중입니다.
+            치킨은 한국인이 가장 많이 배달 주문하는 음식 1위를 차지하고 있으며,
+            한국인 1인당 연간 치킨 소비량은 약 11.5kg에 달합니다.
+          </p>
+        </section>
+        
+        <section>
+          <h2 class="text-2xl font-bold mb-4">한국 치킨의 특징</h2>
+          <ul class="list-disc pl-5 space-y-2">
+            <li>두 번 튀기는 조리법으로 바삭한 식감을 극대화</li>
+            <li>다양한 양념과 소스를 활용한 창의적인 메뉴 개발</li>
+            <li>굽거나 오븐에 조리하는 등 건강에 초점을 맞춘 조리법 등장</li>
+            <li>배달 시스템의 발달로 높은 접근성</li>
+            <li>'치맥'이라는 독특한 소비 문화 형성</li>
+          </ul>
+        </section>
+      </article>
+    </div>
+  </main>
+  
+  <footer class="mt-10 text-white text-sm drop-shadow">
+    &copy; 2024 K-치킨 매니아. All rights reserved.
+  </footer>
+  
+  <!-- 모바일 메뉴 스크립트 -->
+  <script>
+    // 모바일 메뉴 토글 기능
+    const btn = document.querySelector('.mobile-menu-button');
+    const menu = document.querySelector('.mobile-menu');
+    
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
